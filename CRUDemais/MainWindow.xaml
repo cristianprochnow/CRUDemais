@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CRUDemais"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="588" Width="800">
+    <Grid Margin="0,0,0,-6">
+        <Label Content="CRUD+" HorizontalAlignment="Left" Margin="39,33,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="48" FontFamily="Cascadia Mono"/>
+        <Label Content="Olá!" HorizontalAlignment="Left" Margin="39,126,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Cascadia Mono"/>
+        <TextBlock HorizontalAlignment="Left" Margin="43,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="249" Width="410" FontFamily="Cascadia Mono" LineHeight="20"><Run Text="Seja bem-vindo(a), é um prazer ter você por aqui. Aqui você poderá usufruir do melhor CRUD presente no mercado, simplesmente sentindo cada operação como se fosser algo único e inigualável."/><LineBreak/><Run/><LineBreak/><Run Text="Com o que será visto por aqui, novas ideias podem surgir e assim ideais de mundo formados a partir de toda essa perspectiva."/><LineBreak/><Run/><LineBreak/><Run Text="Por isso, segure-se na cadeira e vamos encarar tamanho conteúdo revolucionário que nos espera após o simples clicar de um botão abaixo."/></TextBlock>
+        <Button x:Name="btnLetsGo" Content="Vamos lá!" HorizontalAlignment="Left" Margin="43,454,0,0" VerticalAlignment="Top" Click="Button_Click" Height="48" Width="133" FontFamily="Cascadia Mono" FontSize="16"/>
+        <Image Margin="490,0,0,0" Source="/hero.jpg" Stretch="Fill"/>
 
     </Grid>
 </Window>
