@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CRUDemais"
         mc:Ignorable="d"
-        Title="MainWindow" Height="588" Width="800">
+        Title="CRUD+" Height="588" Width="800">
     <Grid Margin="0,0,0,-6">
         <Label Content="CRUD+" HorizontalAlignment="Left" Margin="39,33,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="48" FontFamily="Cascadia Mono"/>
         <Label Content="Olá!" HorizontalAlignment="Left" Margin="39,126,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Cascadia Mono"/>
