@@ -25,14 +25,21 @@ namespace CRUDemais
             InitializeComponent();
         }
 
+        private void openRegister()
+        {
+            Register registerWindow = new Register();
+            
+            registerWindow.Show();
+        }
+
         private void BTNadd_Click(object sender, RoutedEventArgs e)
         {
-
+            openRegister();
         }
 
         private void BTNedit_Click(object sender, RoutedEventArgs e)
         {
-
+            openRegister();
         }
 
         private void BTNdelete_Click(object sender, RoutedEventArgs e)

@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="CRUD+" Height="450" Width="800">
     <Grid>
-        <Button x:Name="BTNadd" Content="Adicionar" HorizontalAlignment="Left" Margin="41,38,0,0" VerticalAlignment="Top" Height="40" Width="98" FontFamily="Cascadia Mono" Click="BTNadd_Click"/>
-        <Button x:Name="BTNedit" Content="Editar" HorizontalAlignment="Left" Margin="153,38,0,0" VerticalAlignment="Top" Height="40" Width="77" FontFamily="Cascadia Mono" Click="BTNedit_Click"/>
-        <Button x:Name="BTNdelete" Content="Excluir" HorizontalAlignment="Left" Margin="245,38,0,0" VerticalAlignment="Top" Height="40" Width="81" FontFamily="Cascadia Mono" Click="BTNdelete_Click"/>
-        <DataGrid x:Name="DTGdados" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,99,0,0" FontFamily="Cascadia Mono"/>
+        <Button x:Name="BTNadd" Content="Adicionar" HorizontalAlignment="Left" Margin="32,34,0,0" VerticalAlignment="Top" Height="40" Width="98" FontFamily="Cascadia Mono" Click="BTNadd_Click"/>
+        <Button x:Name="BTNedit" Content="Editar" HorizontalAlignment="Left" Margin="141,34,0,0" VerticalAlignment="Top" Height="40" Width="77" FontFamily="Cascadia Mono" Click="BTNedit_Click"/>
+        <Button x:Name="BTNdelete" Content="Excluir" HorizontalAlignment="Left" Margin="230,34,0,0" VerticalAlignment="Top" Height="40" Width="81" FontFamily="Cascadia Mono" Click="BTNdelete_Click"/>
+        <DataGrid x:Name="DTGdados" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,110,0,-11" FontFamily="Cascadia Mono"/>
     </Grid>
 </Window>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="CRUDemais.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CRUDemais"
+        mc:Ignorable="d"
+        Title="CRUD+" Height="596" Width="544">
+    <Grid>
+        <Label x:Name="H1register" Content="Cadastro de um &#xD;&#xA;Fato Curioso" HorizontalAlignment="Left" Margin="33,34,0,0" VerticalAlignment="Top" FontFamily="Cascadia Mono" FontSize="24" FontWeight="Bold"/>
+        <TextBox x:Name="TXTdescricao" HorizontalAlignment="Left" Margin="39,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456" TextChanged="TextBox_TextChanged" Height="32" FontFamily="Cascadia Mono"/>
+        <Label Content="Definição do Fato" HorizontalAlignment="Left" Margin="33,137,0,0" VerticalAlignment="Top" FontFamily="Cascadia Mono" FontWeight="Bold"/>
+        <Label Content="Descrição mais profunda sobre " HorizontalAlignment="Left" Margin="34,220,0,0" VerticalAlignment="Top" FontFamily="Cascadia Mono" FontWeight="Bold"/>
+        <TextBox x:Name="TXTinformacoes" HorizontalAlignment="Left" Margin="39,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456" Height="32" FontFamily="Cascadia Mono"/>
+        <Label Content="Tags sobre o assunto" HorizontalAlignment="Left" Margin="34,298,0,0" VerticalAlignment="Top" FontFamily="Cascadia Mono" FontWeight="Bold"/>
+        <TextBox x:Name="TXTtags" HorizontalAlignment="Left" Margin="39,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456" Height="32" FontFamily="Cascadia Mono"/>
+        <Slider x:Name="SLDavaliacao" HorizontalAlignment="Left" Margin="62,408,0,0" VerticalAlignment="Top" Width="410"/>
+        <Label Content="Sua avaliação sobre o assunto" HorizontalAlignment="Left" Margin="34,379,0,0" VerticalAlignment="Top" FontFamily="Cascadia Mono" FontWeight="Bold"/>
+        <Label Content="0" HorizontalAlignment="Left" Margin="33,405,0,0" VerticalAlignment="Top" FontFamily="Cascadia Mono"/>
+        <Label Content="5" HorizontalAlignment="Left" Margin="484,405,0,0" VerticalAlignment="Top" FontFamily="Cascadia Mono"/>
+        <Button x:Name="BTNsubmitRegister" Content="Salvar" HorizontalAlignment="Left" Margin="39,468,0,0" VerticalAlignment="Top" Height="39" Width="70" Click="Button_Click" FontFamily="Cascadia Mono"/>
+
+    </Grid>
+</Window>
