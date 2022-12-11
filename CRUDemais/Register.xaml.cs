@@ -110,7 +110,7 @@ namespace CRUDemais
             if (this.selectedIndexFromGridView != -1)
             {
                 LocalDatabase localDatabase = LocalDatabase.getInstance();
-                decimal codigo = localDatabase.list()[this.selectedIndexFromGridView].Codigo;
+                int codigo = localDatabase.list()[this.selectedIndexFromGridView].Codigo;
                 fatoCurioso = localDatabase.get(codigo);
             }
 

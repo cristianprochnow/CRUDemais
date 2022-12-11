@@ -53,6 +53,11 @@ namespace CRUDemais
             }
 
             string[] tagsList = tags.Split(separator);
+            // Remover os espaços em branco antes e depois de cada tag.
+            for (int counter = 0; counter < tagsList.Length; counter++)
+            {
+                tagsList[counter] = tagsList[counter].Trim();
+            }
             string tagsFormatadas = String.Join(joiner, tagsList);
 
             return tagsFormatadas;
@@ -76,7 +81,7 @@ namespace CRUDemais
             fatosCuriosos[index] = fatoCurioso;
         }
 
-        public FatoCurioso? get(decimal codigo)
+        public FatoCurioso? get(int codigo)
         {
             FatoCurioso? fatoCurioso = null;
 
@@ -91,9 +96,9 @@ namespace CRUDemais
             return fatoCurioso;
         }
 
-        public void delete(int id)
+        public void delete(int codigo)
         {
-            int index = getIndex(id);
+            int index = getIndex(codigo);
 
             if (index != -1)
             {
@@ -101,7 +106,7 @@ namespace CRUDemais
             }
         }
 
-        public int getIndex(decimal codigo)
+        public int getIndex(int codigo)
         {
             int index = -1;
 

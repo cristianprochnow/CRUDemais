@@ -11,12 +11,20 @@ namespace CRUDemais
     {
         public static void alert(string caption, string message)
         {
-            string messageBoxText = message;
-            string captionText = caption;
             MessageBoxButton button = MessageBoxButton.OK;
             MessageBoxImage icon = MessageBoxImage.Warning;
 
-            MessageBox.Show(messageBoxText, captionText, button, icon);
+            MessageBox.Show(message, caption, button, icon);
+        }
+
+        public static MessageBoxResult confirm(string caption, string message)
+        {
+            MessageBoxButton button = MessageBoxButton.YesNo;
+            MessageBoxImage icon = MessageBoxImage.Question;
+
+            MessageBoxResult answer = MessageBox.Show(message, caption, button, icon);
+
+            return answer;
         }
     }
 }

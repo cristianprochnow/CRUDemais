@@ -56,12 +56,30 @@ namespace CRUDemais
 
         private void BTNdelete_Click(object sender, RoutedEventArgs e)
         {
-            if (DTGdados.SelectedIndex == -1)
+            int selectedIndex = DTGdados.SelectedIndex;
+
+
+            if (selectedIndex == -1)
             {
                 Msg.alert("Aviso", "Selecione um registro da tabela abaixo para excluir!");
 
                 return;
             }
+
+            MessageBoxResult answer = Msg.confirm("Exclusão de Fato Curioso", "Confirma a exclusão do registro selecionado?");
+
+            if (answer != MessageBoxResult.Yes)
+            {
+                return;
+            }
+
+            LocalDatabase localDatabase = LocalDatabase.getInstance();
+            
+            int codigo = localDatabase.list()[selectedIndex].Codigo;
+            
+            localDatabase.delete(codigo);
+            DTGdados.Items.Refresh();
+            DTGdados.Focus();
         }
 
         private void DTGdados_Loaded(object sender, RoutedEventArgs e)
