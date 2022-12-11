@@ -8,7 +8,7 @@ namespace CRUDemais
 {
     internal class FatoCurioso
     {
-        public int Codigo { get; set; } = 0;
+        public int Codigo { get; set; } = -1;
         public string Descricao { get; set; } = "";
         public string Informacoes { get; set; } = "";
         public string Tags { get; set; } = "";

@@ -25,9 +25,14 @@ namespace CRUDemais
             InitializeComponent();
         }
 
-        private void openRegister()
+        private void openRegister(bool isEdition = false)
         {
-            Register registerWindow = new Register();
+            int selectedIndex = -1;
+            if (isEdition)
+            {
+                selectedIndex = DTGdados.SelectedIndex;
+            }
+            Register registerWindow = new Register(DTGdados, selectedIndex);
             
             registerWindow.Show();
         }
@@ -39,12 +44,52 @@ namespace CRUDemais
 
         private void BTNedit_Click(object sender, RoutedEventArgs e)
         {
-            openRegister();
+            if (DTGdados.SelectedIndex == -1)
+            {
+                Msg.alert("Aviso", "Selecione um registro da tabela abaixo para editar!");
+
+                return;
+            }
+
+            openRegister(true);
         }
 
         private void BTNdelete_Click(object sender, RoutedEventArgs e)
         {
+            if (DTGdados.SelectedIndex == -1)
+            {
+                Msg.alert("Aviso", "Selecione um registro da tabela abaixo para excluir!");
 
+                return;
+            }
+        }
+
+        private void DTGdados_Loaded(object sender, RoutedEventArgs e)
+        {
+            DTGdados.CanUserAddRows = false;
+            DTGdados.CanUserDeleteRows = false;
+            DTGdados.Focus();
+            DTGdados.SelectedIndex = 0;
+        }
+
+        private void WINdados_Loaded(object sender, RoutedEventArgs e)
+        {
+            LocalDatabase localDatabase = LocalDatabase.getInstance();
+
+            if (localDatabase.list().Count < 1)
+            {
+                localDatabase.insert(new FatoCurioso()
+                {
+                    Descricao = "Descrição de Exemplo",
+                    Informacoes = "Mais informações do exemplo que foi cadastrado.",
+                    Tags = "fatos,curiosidades,fatos curiosos",
+                    Avaliacao = 4
+                });
+            }
+
+            DTGdados.ItemsSource = LocalDatabase.fatosCuriosos;
+
+            DTGdados.Items.Refresh();
         }
     }
 }
